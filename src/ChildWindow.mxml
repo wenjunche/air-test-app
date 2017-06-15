@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+  Created by richard on 5/24/2017.
+-->
+<mx:Window xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:mx="library://ns.adobe.com/flex/mx" creationComplete="app_creationCompleteHandler(event)">
+    <fx:Script><![CDATA[
+        import com.openfin.OpenfinNativeExtention;
+
+        import fin.desktop.RuntimeLauncher;
+        import fin.desktop.InterApplicationBus;
+        import mx.events.FlexEvent;
+
+        private var m_ext: OpenfinNativeExtention;
+        protected var runtimeLauncher:RuntimeLauncher;
+
+        protected function app_creationCompleteHandler(event: FlexEvent):void {
+            m_ext = new OpenfinNativeExtention();
+
+            InterApplicationBus.getInstance().publish("FlexTopic", {value: "From Flex child Window"});
+        }
+        protected function btn_clickHandler(event: MouseEvent): void {
+            var inputString : String = "Child";
+            log.text += inputString + "\n";
+            var htmd:String = m_ext.getHWND();
+            log.text += htmd + "\n";
+            fin.desktop.System.getInstance().getVersion(function (v:String) {
+                log.text += "Connected to Runtime " + v;
+            });
+        }
+
+        ]]></fx:Script>
+    <mx:TextArea id="log" right="10" top = "10" bottom="10"/>
+    <mx:Button click="btn_clickHandler(event)" label="Test ANE"/>
+
+</mx:Window>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="Flex" version="4">
+  <component name="FlexBuildConfigurationManager" active="air-app">
+    <configurations>
+      <configuration name="air-app" target-platform="Desktop" pure-as="true" main-class="Main" output-file="Main.swf" output-folder="$MODULE_DIR$/../out/production/air-app">
+        <dependencies target-player="25.0">
+          <entries>
+            <entry library-id="b0740513-99e8-4a9e-b595-a3792f92abe3">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="221543e2-03f2-467e-95df-ebe2be7b864f">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="AIRSDK_Compiler" />
+        </dependencies>
+        <compiler-options />
+        <packaging-air-desktop package-file-name="Main" />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+    </configurations>
+    <compiler-options />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="AIRSDK_Compiler" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="b0740513-99e8-4a9e-b595-a3792f92abe3" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../air-adapter/out/production/air-adapter/OpenFinAirAdapter-6.0.1.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="221543e2-03f2-467e-95df-ebe2be7b864f" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../air-adapter/lib/OpenFinAirNativeExtension-6.0.1.ane!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+  Created by Wenjun Che on 5/24/2017.
+-->
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+                       creationComplete="app_creationCompleteHandler(event)" >
+    <fx:Script><![CDATA[
+        import mx.events.FlexEvent;
+        import mx.managers.PopUpManager;
+
+        protected function app_creationCompleteHandler(event: FlexEvent):void {
+        }
+
+        protected function btn_clickHandler(event: MouseEvent): void {
+            var inputString : String = "Hello";
+            log.text += inputString + "\n";
+
+            var popup = PopUpManager.createPopUp(this, TitleWindow, false);
+            PopUpManager.centerPopUp(popup);
+        }
+
+        ]]></fx:Script>
+    <s:TextArea id="log" right="10" top = "10" bottom="10"/>
+    <s:Button click="btn_clickHandler(event)" label="Test ANE"/>
+</s:WindowedApplication>

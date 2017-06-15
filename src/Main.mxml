@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+        creationComplete="app_creationCompleteHandler(event)">
+    <fx:Script><![CDATA[
+        import com.openfin.OpenfinNativeExtention;
+
+        import fin.desktop.RuntimeConfiguration;
+        import fin.desktop.InterApplicationBus;
+        import fin.desktop.System;
+        import fin.desktop.RuntimeLauncher;
+        import fin.desktop.Window;
+
+        import mx.events.FlexEvent;
+
+        private var m_ext:OpenfinNativeExtention;
+        protected var runtimeLauncher:RuntimeLauncher;
+        private var openfinSystem:fin.desktop.System;
+        private var htmd:String;
+
+        protected function app_creationCompleteHandler(event:FlexEvent):void {
+            m_ext = new OpenfinNativeExtention();
+            htmd = m_ext.getHWND();
+            log.text += htmd + "\n";
+            NativeApplication.nativeApplication.addEventListener(Event.EXITING, onExit);
+
+            RuntimeConfiguration.enableFileLogging("testAirApp.log");
+            RuntimeConfiguration.enableTraceLogging();
+        }
+
+        protected function btn_connectHandler(event:MouseEvent):void {
+            var cfg:RuntimeConfiguration = new RuntimeConfiguration("Flex Test App");
+            cfg.appManifestUrl = "https://demoappdirectory.openf.in/desktop/config/apps/OpenFin/HelloOpenFin/snap.json";
+            cfg.onConnectionReady = onConnectionReady;
+            cfg.onConnectionError = onConnectionError;
+            cfg.onConnectionClose = onConnectionClose;
+            cfg.connectionTimeout = 15000;
+//            cfg.runtimeWorkPath = "c:\\openfin";
+            runtimeLauncher = new RuntimeLauncher(cfg);
+        }
+
+        protected function btn_disconnectHandler(event:MouseEvent):void {
+            fin.desktop.System.getInstance().exit(function () {
+                trace("exit success callback");
+            });
+        }
+
+        protected function btn_hwndHandler(event:MouseEvent): void {
+            var w:Window = new Window("OpenFin Hello World", "OpenFin Hello World");
+            w.getNativeId(function (data:String) {
+                trace(data);
+                var parentHWND = data; //"0x00070D52"; //data;
+                var childHWND = htmd;
+                m_ext.captureAirWindow(parentHWND, childHWND, 20);
+            });
+        }
+
+        private function onConnectionReady():void {
+            trace("Connection Successful!");
+            InterApplicationBus.getInstance().publish("FlexTopic", {value: "From Flex Main Window"});
+            fin.desktop.System.getInstance().getVersion(function (v:String) {
+                log.text += "Connected to Runtime " + v;
+            });
+
+            /*
+            var window:ChildWindow = new ChildWindow();
+            window.width = 200;
+            window.height = 200;
+            window.open(true);
+            */
+        }
+
+        private function onConnectionError(reason:String = null):void {
+            trace("Connection failed", reason);
+        }
+
+        private function onConnectionClose(reason:String = null):void {
+            trace("Connection close", reason);
+        }
+
+        private function onExit(event:Event):void {
+            trace("Exiting");
+        }
+
+        ]]></fx:Script>
+    <s:TextArea id="log" right="10" top = "10" bottom="10"/>
+    <s:Button left="10" top="10" click="btn_connectHandler(event)" label="Connect to OpenFin"/>
+    <s:Button left="10" top="40" click="btn_disconnectHandler(event)" label="Disconnect from OpenFin"/>
+    <s:Button left="10" top="70" click="btn_hwndHandler(event)" label="Get HWND"/>
+</s:WindowedApplication>

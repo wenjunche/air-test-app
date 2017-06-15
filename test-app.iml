@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="Flex" version="4">
+  <component name="FlexBuildConfigurationManager" active="flex-test-app">
+    <configurations>
+      <configuration name="flex-test-app" target-platform="Desktop" main-class="Main" output-file="Main.swf" output-folder="$MODULE_DIR$/out/production/air-test-app">
+        <dependencies target-player="11.1">
+          <entries>
+            <entry library-id="80f90180-6055-41bb-bdc9-c804bb147974">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="b8ec97d4-d71b-47cf-94da-45031c1ee4d8">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="flex_sdk_4.6" />
+        </dependencies>
+        <compiler-options />
+        <packaging-air-desktop use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/Main-app.xml" package-file-name="Main" />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+    </configurations>
+    <compiler-options />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="flex_sdk_4.6" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="80f90180-6055-41bb-bdc9-c804bb147974" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../AirNativeExtensionLib/lib/OpenFinAirNativeExtension-6.0.1.ane!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="b8ec97d4-d71b-47cf-94da-45031c1ee4d8" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../air-adapter/out/production/air-adapter/OpenFinAirAdapter-6.0.1.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>
