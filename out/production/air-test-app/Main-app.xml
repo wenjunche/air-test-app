@@ -1,11 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Adobe AIR Application Descriptor File Template.
-     Specifies parameters for identifying, installing, and launching AIR applications.
-
-     xmlns - The Adobe AIR namespace: http://ns.adobe.com/air/application/3.1.
-     The last segment of the namespace specifies the version of the AIR runtime required for this application to run.
-
-     minimumPatchLevel - The minimum patch level of the AIR runtime required to run the application. Optional. -->
 <application xmlns="http://ns.adobe.com/air/application/3.1">
   <!-- A universally unique application identifier. Must be unique across all AIR applications.
          Using a reverse DNS-style name as the id is recommended. (Eg. com.example.ExampleApplication.) Required. -->
@@ -51,9 +43,9 @@
     <!-- Whether the user can resize the window. Optional. Default true. -->
     <!--<resizable></resizable>-->
     <!-- The window's initial width in pixels. Optional. -->
-    <!--<width></width>-->
+    <width>400</width>
     <!-- The window's initial height in pixels. Optional. -->
-    <!--<height></height>-->
+    <height>400</height>
     <!-- The window's initial x position. Optional. -->
     <!--<x></x>-->
     <!-- The window's initial y position. Optional. -->
@@ -208,4 +200,3 @@
   <!-- <containsVideo></containsVideo> -->
   <!--</android>-->
 </application>
-

@@ -4,23 +4,29 @@
     <fx:Script><![CDATA[
         import com.openfin.OpenfinNativeExtention;
 
+        import fin.desktop.ApplicationOptions;
+
+        import fin.desktop.CaptureOptions;
+        import fin.desktop.CapturingWindow;
+
         import fin.desktop.RuntimeConfiguration;
         import fin.desktop.InterApplicationBus;
         import fin.desktop.System;
         import fin.desktop.RuntimeLauncher;
         import fin.desktop.Window;
+        import fin.desktop.WindowOptions;
 
         import mx.events.FlexEvent;
 
         private var m_ext:OpenfinNativeExtention;
         protected var runtimeLauncher:RuntimeLauncher;
         private var openfinSystem:fin.desktop.System;
-        private var htmd:String;
+        private var hwnd:String;
 
         protected function app_creationCompleteHandler(event:FlexEvent):void {
             m_ext = new OpenfinNativeExtention();
-            htmd = m_ext.getHWND();
-            log.text += htmd + "\n";
+            hwnd = m_ext.getHWND();
+            log.text += hwnd + "\n";
             NativeApplication.nativeApplication.addEventListener(Event.EXITING, onExit);
 
             RuntimeConfiguration.enableFileLogging("testAirApp.log");
@@ -45,13 +51,21 @@
         }
 
         protected function btn_hwndHandler(event:MouseEvent): void {
-            var w:Window = new Window("OpenFin Hello World", "OpenFin Hello World");
-            w.getNativeId(function (data:String) {
-                trace(data);
-                var parentHWND = data; //"0x00070D52"; //data;
-                var childHWND = htmd;
-                m_ext.captureAirWindow(parentHWND, childHWND, 20);
-            });
+            var captureOptions: CaptureOptions = new CaptureOptions();
+            captureOptions.borderTop = captureOptions.borderRight = captureOptions.borderBottom = captureOptions.borderLeft = 30;
+            var cw: CapturingWindow = new CapturingWindow(stage.nativeWindow);
+            var appOpts = new ApplicationOptions("Air Parent", "http://localhost:8081/airChrome.html");
+            var winOpts: WindowOptions = new WindowOptions();
+            winOpts.autoShow = true;
+            winOpts.defaultHeight = winOpts.defaultWidth = 500;
+            winOpts.frame = false;
+            winOpts.contextMenu = true;
+            appOpts.mainWindowOptions = winOpts;
+            cw.Capture(appOpts  ,captureOptions);
+
+//                var parentHWND = data;
+//               var childHWND = hwnd;
+//                m_ext.captureAirWindow(parentHWND, childHWND, 30, 30, 30, 30);
         }
 
         private function onConnectionReady():void {
@@ -84,6 +98,6 @@
         ]]></fx:Script>
     <s:TextArea id="log" right="10" top = "10" bottom="10"/>
     <s:Button left="10" top="10" click="btn_connectHandler(event)" label="Connect to OpenFin"/>
-    <s:Button left="10" top="40" click="btn_disconnectHandler(event)" label="Disconnect from OpenFin"/>
-    <s:Button left="10" top="70" click="btn_hwndHandler(event)" label="Get HWND"/>
+    <s:Button left="10" top="40" click="btn_hwndHandler(event)" label="Capture AIR window"/>
+    <s:Button left="10" top="70" click="btn_disconnectHandler(event)" label="Disconnect from OpenFin"/>
 </s:WindowedApplication>
