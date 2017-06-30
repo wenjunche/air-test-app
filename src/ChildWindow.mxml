@@ -1,35 +1,59 @@
 <?xml version="1.0"?>
 <!--
-  Created by richard on 5/24/2017.
+  Created by wenjun on 5/24/2017.
 -->
-<mx:Window xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:mx="library://ns.adobe.com/flex/mx" creationComplete="app_creationCompleteHandler(event)">
+
+<s:Window xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+           creationComplete="app_creationCompleteHandler2(event)" systemChrome="none" backgroundColor="white" showStatusBar="false"
+            addedToStage="added_to_stage_handler(event)" >
     <fx:Script><![CDATA[
         import com.openfin.OpenfinNativeExtention;
 
+        import fin.desktop.ApplicationOptions;
+        import fin.desktop.CaptureOptions;
+        import fin.desktop.CapturingWindow;
+
         import fin.desktop.RuntimeLauncher;
         import fin.desktop.InterApplicationBus;
+        import fin.desktop.WindowOptions;
+
         import mx.events.FlexEvent;
 
-        private var m_ext: OpenfinNativeExtention;
-        protected var runtimeLauncher:RuntimeLauncher;
+        private var captured:Boolean = false;
+        private var cw:CapturingWindow
 
-        protected function app_creationCompleteHandler(event: FlexEvent):void {
-            m_ext = new OpenfinNativeExtention();
-
-            InterApplicationBus.getInstance().publish("FlexTopic", {value: "From Flex child Window"});
-        }
-        protected function btn_clickHandler(event: MouseEvent): void {
-            var inputString : String = "Child";
-            log.text += inputString + "\n";
-            var htmd:String = m_ext.getHWND();
-            log.text += htmd + "\n";
-            fin.desktop.System.getInstance().getVersion(function (v:String) {
-                log.text += "Connected to Runtime " + v;
-            });
+        protected function app_creationCompleteHandler2(event:FlexEvent):void {
         }
 
+        protected function added_to_stage_handler(event:Event) {
+            stage.nativeWindow.title = "Air Child Window 2";
+            if (!captured) {
+                captured = true;
+                fin.desktop.System.getInstance().getVersion(function (v:String) {
+                    log.text += "Connected to Runtime " + v;
+                    captureWindow();
+                });
+            }
+        }
+
+        private function captureWindow() {
+            var captureOptions:CaptureOptions = new CaptureOptions();
+            captureOptions.borderTop = captureOptions.borderRight = captureOptions.borderBottom = captureOptions.borderLeft = 30;
+            cw = new CapturingWindow(stage.nativeWindow);
+            var appOpts = new ApplicationOptions("Air Parent 2", "http://localhost:8081/airChrome.html");
+            var winOpts:WindowOptions = new WindowOptions();
+            winOpts.autoShow = true;
+            winOpts.defaultTop = 100;
+            winOpts.defaultLeft = 700;
+            winOpts.defaultHeight = winOpts.defaultWidth = 500;
+            winOpts.frame = false;
+            winOpts.contextMenu = true;
+            winOpts.saveWindowState = false;
+            appOpts.mainWindowOptions = winOpts;
+            cw.capture(appOpts, captureOptions);
+        }
         ]]></fx:Script>
-    <mx:TextArea id="log" right="10" top = "10" bottom="10"/>
-    <mx:Button click="btn_clickHandler(event)" label="Test ANE"/>
+    <s:Label  left="10" top="10" right="10" fontWeight="bold" fontSize="13" textAlign="center">My fancy Air app window 2</s:Label>
+    <s:TextArea id="log" left="10" top = "40" bottom="10" right="10"/>
 
-</mx:Window>
+</s:Window>

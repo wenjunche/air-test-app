@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
-        creationComplete="app_creationCompleteHandler(event)">
+        creationComplete="app_creationCompleteHandler(event)" backgroundColor="white" showStatusBar="false"
+                       addedToStage="added_to_stage_handler(event)" top="300" left="300">
     <fx:Script><![CDATA[
         import com.openfin.OpenfinNativeExtention;
 
@@ -18,29 +19,31 @@
 
         import mx.events.FlexEvent;
 
-        private var m_ext:OpenfinNativeExtention;
         protected var runtimeLauncher:RuntimeLauncher;
         private var openfinSystem:fin.desktop.System;
-        private var hwnd:String;
+        private var connectedToOpenFin:Boolean;
 
         protected function app_creationCompleteHandler(event:FlexEvent):void {
-            m_ext = new OpenfinNativeExtention();
-            hwnd = m_ext.getHWND();
-            log.text += hwnd + "\n";
+            connectedToOpenFin = false;
             NativeApplication.nativeApplication.addEventListener(Event.EXITING, onExit);
 
             RuntimeConfiguration.enableFileLogging("testAirApp.log");
             RuntimeConfiguration.enableTraceLogging();
         }
 
+        protected function added_to_stage_handler(event: Event) {
+            stage.nativeWindow.title =  "Air Child Window 1";
+        }
+
         protected function btn_connectHandler(event:MouseEvent):void {
             var cfg:RuntimeConfiguration = new RuntimeConfiguration("Flex Test App");
-            cfg.appManifestUrl = "https://demoappdirectory.openf.in/desktop/config/apps/OpenFin/HelloOpenFin/snap.json";
+            cfg.appManifestUrl = "https://demoappdirectory.openf.in/desktop/config/apps/OpenFin/AirDemo/app.json";
             cfg.onConnectionReady = onConnectionReady;
             cfg.onConnectionError = onConnectionError;
             cfg.onConnectionClose = onConnectionClose;
             cfg.connectionTimeout = 15000;
 //            cfg.runtimeWorkPath = "c:\\openfin";
+
             runtimeLauncher = new RuntimeLauncher(cfg);
         }
 
@@ -50,37 +53,40 @@
             });
         }
 
-        protected function btn_hwndHandler(event:MouseEvent): void {
-            var captureOptions: CaptureOptions = new CaptureOptions();
+        protected function btn_captureHandler(event:MouseEvent):void {
+            captureButton.enabled = false;
+            var captureOptions:CaptureOptions = new CaptureOptions();
             captureOptions.borderTop = captureOptions.borderRight = captureOptions.borderBottom = captureOptions.borderLeft = 30;
-            var cw: CapturingWindow = new CapturingWindow(stage.nativeWindow);
-            var appOpts = new ApplicationOptions("Air Parent", "http://localhost:8081/airChrome.html");
-            var winOpts: WindowOptions = new WindowOptions();
+            var cw:CapturingWindow = new CapturingWindow(stage.nativeWindow);
+            var appOpts = new ApplicationOptions("Air Parent 1", "http://localhost:8081/airChrome.html");
+            var winOpts:WindowOptions = new WindowOptions();
             winOpts.autoShow = true;
+            winOpts.defaultTop = 100;
+            winOpts.defaultLeft = 100;
             winOpts.defaultHeight = winOpts.defaultWidth = 500;
             winOpts.frame = false;
             winOpts.contextMenu = true;
             appOpts.mainWindowOptions = winOpts;
-            cw.Capture(appOpts  ,captureOptions);
+            cw.capture(appOpts, captureOptions, captureCallback);
+        }
 
-//                var parentHWND = data;
-//               var childHWND = hwnd;
-//                m_ext.captureAirWindow(parentHWND, childHWND, 30, 30, 30, 30);
+        private function captureCallback(event:*): void {
+            var window:ChildWindow = new ChildWindow();
+            window.width = 300;
+            window.height = 300;
+            window.open(true);
         }
 
         private function onConnectionReady():void {
+            connectedToOpenFin = true;
+            launchButton.enabled = false;
+            captureButton.enabled = true;
+            shutDownButton.enabled = true;
             trace("Connection Successful!");
             InterApplicationBus.getInstance().publish("FlexTopic", {value: "From Flex Main Window"});
             fin.desktop.System.getInstance().getVersion(function (v:String) {
                 log.text += "Connected to Runtime " + v;
             });
-
-            /*
-            var window:ChildWindow = new ChildWindow();
-            window.width = 200;
-            window.height = 200;
-            window.open(true);
-            */
         }
 
         private function onConnectionError(reason:String = null):void {
@@ -94,10 +100,10 @@
         private function onExit(event:Event):void {
             trace("Exiting");
         }
-
         ]]></fx:Script>
-    <s:TextArea id="log" right="10" top = "10" bottom="10"/>
-    <s:Button left="10" top="10" click="btn_connectHandler(event)" label="Connect to OpenFin"/>
-    <s:Button left="10" top="40" click="btn_hwndHandler(event)" label="Capture AIR window"/>
-    <s:Button left="10" top="70" click="btn_disconnectHandler(event)" label="Disconnect from OpenFin"/>
+    <s:Label  left="10" top="10" right="10" fontWeight="bold" fontSize="13" textAlign="center">My fancy Air app window 1</s:Label>
+    <s:Button id="launchButton" left="10" top="40" enabled="{!connectedToOpenFin}" click="btn_connectHandler(event)" label="Connect to OpenFin"/>
+    <s:Button id="captureButton" left="10" top="70" enabled="{connectedToOpenFin}" click="btn_captureHandler(event)" label="Capture AIR window"/>
+    <s:Button id="shutDownButton" left="10" top="100" enabled="{connectedToOpenFin}" click="btn_disconnectHandler(event)" label="Shut down"/>
+    <s:TextArea id="log" left="10" top = "130" bottom="10" right="10"/>
 </s:WindowedApplication>
