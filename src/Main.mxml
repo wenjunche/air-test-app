@@ -58,7 +58,7 @@
             var captureOptions:CaptureOptions = new CaptureOptions();
             captureOptions.borderTop = captureOptions.borderRight = captureOptions.borderBottom = captureOptions.borderLeft = 30;
             var cw:CapturingWindow = new CapturingWindow(stage.nativeWindow);
-            var appOpts = new ApplicationOptions("Air Parent 1", "http://localhost:8081/airChrome.html");
+            var appOpts = new ApplicationOptions("Air Parent 1", "https://demoappdirectory.openf.in/desktop/config/apps/OpenFin/AirDemo/airChrome.html");
             var winOpts:WindowOptions = new WindowOptions();
             winOpts.autoShow = true;
             winOpts.defaultTop = 100;
@@ -66,6 +66,7 @@
             winOpts.defaultHeight = winOpts.defaultWidth = 500;
             winOpts.frame = false;
             winOpts.contextMenu = true;
+            winOpts.saveWindowState = false;
             appOpts.mainWindowOptions = winOpts;
             cw.capture(appOpts, captureOptions, captureCallback);
         }
