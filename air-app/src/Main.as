@@ -1,7 +1,6 @@
 package {
 
 import fin.desktop.ExternalWindow;
-import fin.desktop.RuntimeConfiguration;
 import fin.desktop.Window;
 
 import flash.display.Sprite;
@@ -16,7 +15,6 @@ import fin.desktop.RuntimeLauncher;
 
 public class Main extends Sprite {
     protected var runtimeLauncher:RuntimeLauncher;
-    private var openfinSystem:fin.desktop.System;
     private var textField:TextField;
 
     public function Main() {
@@ -27,8 +25,11 @@ public class Main extends Sprite {
         textField.text = "Starting OpenFin Runtime...\n";
         addChild(textField);
 
+        RuntimeConfiguration.enableTraceLogging();
+        RuntimeConfiguration.enableNativeExtensionLogging("C:\\Users\\wenjun\\AppData\\Local\\OpenFin\\logs\\AirNative.log");
+
         var cfg:RuntimeConfiguration = new RuntimeConfiguration("Air Test App");
-        cfg.appManifestUrl = "https://demoappdirectory.openf.in/desktop/config/apps/OpenFin/HelloOpenFin/app2.json";
+        cfg.appManifestUrl = "https://demoappdirectory.openf.in/desktop/config/apps/OpenFin/HelloOpenFin/app.json";
         cfg.onConnectionReady = onConnectionReady;
         cfg.onConnectionError = onConnectionError;
         cfg.onConnectionClose = onConnectionClose;
