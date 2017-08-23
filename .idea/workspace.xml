@@ -6,11 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7924c20-b807-465d-82ab-080b951c09e0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/remote-obj/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/remote-obj/remote-obj.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/remote-obj/src/Main.mxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/remote-obj/src/Main.mxml" afterPath="$PROJECT_DIR$/remote-obj/src/Main.mxml" />
     </list>
     <ignored path="air-test-app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +33,7 @@
       <file leaf-file-name="Main.mxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.mxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="1258">
               <caret line="74" column="19" lean-forward="false" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
               <folding>
                 <marker date="1503439147867" expanded="true" signature="368:830" ph="..." />
@@ -58,45 +54,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleFeed.mxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simple-feed/src/SimpleFeed.mxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="33" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding>
-                <marker date="1503446700232" expanded="true" signature="1029:1096" ph="..." />
-                <marker date="1503446700232" expanded="true" signature="1175:1186" ph="{...}" />
-                <marker date="1503446700232" expanded="true" signature="1252:1308" ph="{...}" />
-                <marker date="1503446700232" expanded="true" signature="1373:1466" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.mxml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.mxml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/remote-obj/src/Main.mxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="59" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="59" />
+            <state relative-caret-position="205">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
-                <marker date="1503516590906" expanded="true" signature="621:694" ph="..." />
-                <marker date="1503516590906" expanded="true" signature="759:796" ph="{...}" />
-                <marker date="1503516590906" expanded="true" signature="871:1190" ph="{...}" />
-                <marker date="1503516590906" expanded="true" signature="1062:1180" ph="{...}" />
+                <marker date="1503518250322" expanded="true" signature="634:707" ph="..." />
+                <marker date="1503518250322" expanded="true" signature="830:867" ph="{...}" />
+                <marker date="1503518250322" expanded="true" signature="942:1241" ph="{...}" />
+                <marker date="1503518250322" expanded="true" signature="1113:1231" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/remote-obj/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="68">
-                <caret line="4" column="45" lean-forward="true" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-                <folding />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="DataGrid.as" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Downloads/flex_sdk_4.6/frameworks/projects/spark/src/spark/components/DataGrid.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="1330" column="24" lean-forward="false" selection-start-line="1330" selection-start-column="24" selection-end-line="1330" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -142,7 +120,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>btn_captureHandler</find>
       <find>geth</find>
       <find>updateCaptureWindowBounds</find>
       <find>UpdateCaptureWindowBounds</find>
@@ -172,10 +149,12 @@
       <find>main</find>
       <find>log.te</find>
       <find>add</find>
+      <find>Bindable</find>
     </findStrings>
     <dirStrings>
-      <dir>C:\Users\wenjun\Documents\Project\air-test-app</dir>
       <dir>C:\Users\wenjun\Documents\Project\air-test-app\src</dir>
+      <dir>C:\Users\wenjun\Documents\Project\air-test-app\simple-feed</dir>
+      <dir>C:\Users\wenjun\Documents\Project\air-test-app</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -203,8 +182,8 @@
         <option value="$PROJECT_DIR$/src/Main.mxml" />
         <option value="$PROJECT_DIR$/simple-feed/src/SimpleFeed.mxml" />
         <option value="$PROJECT_DIR$/simple-feed/README.md" />
-        <option value="$PROJECT_DIR$/remote-obj/src/Main.mxml" />
         <option value="$PROJECT_DIR$/remote-obj/README.md" />
+        <option value="$PROJECT_DIR$/remote-obj/src/Main.mxml" />
       </list>
     </option>
   </component>
@@ -1111,12 +1090,12 @@
       <workItem from="1502891165814" duration="597000" />
       <workItem from="1503280632629" duration="11228000" />
       <workItem from="1503414443966" duration="17932000" />
-      <workItem from="1503513621312" duration="3192000" />
+      <workItem from="1503513621312" duration="4624000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="345104000" />
+    <option name="totallyTimeSpent" value="346536000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1758" y="0" width="1469" height="1047" extended-state="0" />
@@ -1124,19 +1103,20 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40202704" sideWeight="0.635912" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40202704" sideWeight="0.6323634" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44707206" sideWeight="0.18381831" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44707206" sideWeight="0.192335" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44707206" sideWeight="0.81618166" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44707206" sideWeight="0.807665" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37387386" sideWeight="0.75088716" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37387386" sideWeight="0.7466288" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20085166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905295" sideWeight="0.497114" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1151,7 +1131,6 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905295" sideWeight="0.497114" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1191,14 +1170,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Main-app.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="26" lean-forward="false" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.mxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1474,12 +1445,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-          <folding>
-            <marker date="1497546793114" expanded="false" signature="410:460" ph="..." />
-            <marker date="1497546793114" expanded="true" signature="536:579" ph="{...}" />
-            <marker date="1497546793114" expanded="true" signature="660:722" ph="{...}" />
-            <marker date="1497546793114" expanded="true" signature="783:835" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1564,28 +1530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.mxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="74" column="19" lean-forward="false" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
-          <folding>
-            <marker date="1503439147867" expanded="true" signature="368:830" ph="..." />
-            <marker date="1503439147867" expanded="true" signature="1067:1333" ph="{...}" />
-            <marker date="1503439147867" expanded="true" signature="1399:1472" ph="{...}" />
-            <marker date="1503439147867" expanded="true" signature="1543:2071" ph="{...}" />
-            <marker date="1503439147867" expanded="true" signature="2145:2284" ph="{...}" />
-            <marker date="1503439147867" expanded="true" signature="2209:2272" ph="{...}" />
-            <marker date="1503439147867" expanded="true" signature="2355:3315" ph="{...}" />
-            <marker date="1503439147867" expanded="true" signature="3373:3536" ph="{...}" />
-            <marker date="1503439147867" expanded="true" signature="3588:4063" ph="{...}" />
-            <marker date="1503439147867" expanded="true" signature="3979:4051" ph="{...}" />
-            <marker date="1503439147867" expanded="true" signature="4135:4194" ph="{...}" />
-            <marker date="1503439147867" expanded="true" signature="4266:4324" ph="{...}" />
-            <marker date="1503439147867" expanded="true" signature="4376:4417" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/simple-feed/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1633,19 +1577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/remote-obj/src/Main.mxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="59" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="59" />
-          <folding>
-            <marker date="1503516590906" expanded="true" signature="621:694" ph="..." />
-            <marker date="1503516590906" expanded="true" signature="759:796" ph="{...}" />
-            <marker date="1503516590906" expanded="true" signature="871:1190" ph="{...}" />
-            <marker date="1503516590906" expanded="true" signature="1062:1180" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/remote-obj/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1654,6 +1585,49 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="74" column="19" lean-forward="false" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
+          <folding>
+            <marker date="1503439147867" expanded="true" signature="368:830" ph="..." />
+            <marker date="1503439147867" expanded="true" signature="1067:1333" ph="{...}" />
+            <marker date="1503439147867" expanded="true" signature="1399:1472" ph="{...}" />
+            <marker date="1503439147867" expanded="true" signature="1543:2071" ph="{...}" />
+            <marker date="1503439147867" expanded="true" signature="2145:2284" ph="{...}" />
+            <marker date="1503439147867" expanded="true" signature="2209:2272" ph="{...}" />
+            <marker date="1503439147867" expanded="true" signature="2355:3315" ph="{...}" />
+            <marker date="1503439147867" expanded="true" signature="3373:3536" ph="{...}" />
+            <marker date="1503439147867" expanded="true" signature="3588:4063" ph="{...}" />
+            <marker date="1503439147867" expanded="true" signature="3979:4051" ph="{...}" />
+            <marker date="1503439147867" expanded="true" signature="4135:4194" ph="{...}" />
+            <marker date="1503439147867" expanded="true" signature="4266:4324" ph="{...}" />
+            <marker date="1503439147867" expanded="true" signature="4376:4417" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/flex_sdk_4.6/frameworks/projects/spark/src/spark/components/DataGrid.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="1330" column="24" lean-forward="false" selection-start-line="1330" selection-start-column="24" selection-end-line="1330" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/remote-obj/src/Main.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <marker date="1503518250322" expanded="true" signature="634:707" ph="..." />
+            <marker date="1503518250322" expanded="true" signature="830:867" ph="{...}" />
+            <marker date="1503518250322" expanded="true" signature="942:1241" ph="{...}" />
+            <marker date="1503518250322" expanded="true" signature="1113:1231" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

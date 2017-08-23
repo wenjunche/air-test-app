@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark">
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" height="600">
 
     <fx:Declarations>
         <!-- "productService" is defined in Spring's configuration file WEB-INF/config/web-application-config.xml
@@ -12,15 +12,17 @@
         import mx.collections.ArrayCollection;
         import mx.rpc.events.ResultEvent;
 
+        [Bindable] private var products:ArrayCollection;
+
         private function getRemoteData(event:MouseEvent): void {
             ro.findAll();
         }
 
         protected function remote_resultHandler(event:ResultEvent): void {
             // productService return a list of Product
-            var cellList:ArrayCollection = event.result as ArrayCollection;
-            for (var x:int = 0; x < cellList.length; x++) {
-                log.text += (JSON.stringify(cellList.getItemAt(x)));
+            products = event.result as ArrayCollection;
+            for (var x:int = 0; x < products.length; x++) {
+                log.text += (JSON.stringify(products.getItemAt(x)));
                 log.text += "\n";
             }
         }
@@ -29,6 +31,7 @@
 
     <s:Label  left="10" top="10" right="10" fontWeight="bold" fontSize="13" textAlign="center">Simple Remote Object</s:Label>
     <s:Button id="getData" left="10" top="40"  click="getRemoteData(event)" label="Get Data"/>
-    <s:TextArea id="log" left="10" top = "80" bottom="10" right="10"/>
+    <s:TextArea id="log" left="10" top = "80" height="200" right="10"/>
+    <s:DataGrid id="dg" dataProvider="{products}" top="290" left="10" right="10" bottom="8"/>
 
 </s:WindowedApplication>
