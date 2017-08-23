@@ -5,11 +5,15 @@
         <!-- "productService" is defined in Spring's configuration file WEB-INF/config/web-application-config.xml
         and provides remote access to the org.springframework.flex.samples.product.ProductDAO class -->
         <s:RemoteObject id="ro" destination="productService" endpoint="http://localhost:8080/testdrive/messagebroker/amf"
-                        result="remote_resultHandler(event)"/>
+                        fault="remote_faultHandler(event)">
+            <s:method name="findAll" result="remote_resultHandler(event)" />
+        </s:RemoteObject>
     </fx:Declarations>
 
     <fx:Script><![CDATA[
         import mx.collections.ArrayCollection;
+        import mx.controls.Alert;
+        import mx.rpc.events.FaultEvent;
         import mx.rpc.events.ResultEvent;
 
         [Bindable] private var products:ArrayCollection;
@@ -27,11 +31,24 @@
             }
         }
 
+        private function remote_faultHandler(event:FaultEvent):void
+        {
+            Alert.show(event.fault.faultDetail);
+        }
+
         ]]></fx:Script>
 
     <s:Label  left="10" top="10" right="10" fontWeight="bold" fontSize="13" textAlign="center">Simple Remote Object</s:Label>
     <s:Button id="getData" left="10" top="40"  click="getRemoteData(event)" label="Get Data"/>
     <s:TextArea id="log" left="10" top = "80" height="200" right="10"/>
-    <s:DataGrid id="dg" dataProvider="{products}" top="290" left="10" right="10" bottom="8"/>
+    <s:DataGrid id="dg" dataProvider="{products}" top="290" left="10" right="10" bottom="8">
+        <s:columns>
+            <s:ArrayCollection>
+                <s:GridColumn dataField="name" headerText="Name"/>
+                <s:GridColumn dataField="category" headerText="Category"/>
+                <s:GridColumn dataField="price" headerText="Price"/>
+            </s:ArrayCollection>
+        </s:columns>
+    </s:DataGrid>
 
 </s:WindowedApplication>
