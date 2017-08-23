@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/air-app/air-app.iml" filepath="$PROJECT_DIR$/air-app/air-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simple-feed/simple-feed.iml" filepath="$PROJECT_DIR$/simple-feed/simple-feed.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-app.iml" filepath="$PROJECT_DIR$/test-app.iml" />
     </modules>
   </component>

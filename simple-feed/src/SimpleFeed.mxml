@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+               xmlns:mx="library://ns.adobe.com/flex/mx"
+               creationComplete="app_creationCompleteHandler(event)" backgroundColor="white"
+                top="300" left="300">
+
+    <fx:Declarations>
+        <!-- dynamically defined channels in source code -->
+        <mx:ChannelSet id="cs">
+            <!-- Apparently streamingamf does not work with Tomcat -->
+            <!--mx:StreamingAMFChannel url="http://localhost:8080/testdrive/messagebroker/streamingamf"/-->
+            <mx:AMFChannel url="http://localhost:8080/testdrive/messagebroker/amflongpolling"/>
+            <!--mx:AMFChannel url="http://localhost:8080/testdrive/messagebroker/amfpolling"/-->
+        </mx:ChannelSet>
+        <mx:Consumer id="consumer" destination="simple-feed" channelSet="{cs}"
+                     message="messageHandler(event.message)"/>
+    </fx:Declarations>
+
+    <fx:Script><![CDATA[
+        import mx.events.FlexEvent;
+        import mx.messaging.messages.IMessage;
+
+        protected function app_creationCompleteHandler(event:FlexEvent):void {
+        }
+
+        private function messageHandler(message:IMessage): void {
+            log.text += message.body + "\n";
+        }
+
+        private function subscribeFeed(event:MouseEvent): void {
+            trace("Calling consumer.subscribe")
+            consumer.subscribe();
+        }
+
+        ]]></fx:Script>
+    <s:Label  left="10" top="10" right="10" fontWeight="bold" fontSize="13" textAlign="center">Simple Feed</s:Label>
+    <s:Button id="subscribe" left="10" top="40"  click="subscribeFeed(event)" label="Subscribe"/>
+    <s:TextArea id="log" left="10" top = "80" bottom="10" right="10"/>
+
+</s:Application>
