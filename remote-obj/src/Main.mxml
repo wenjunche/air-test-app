@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark">
+
+    <fx:Declarations>
+        <!-- "productService" is defined in Spring's configuration file WEB-INF/config/web-application-config.xml
+        and provides remote access to the org.springframework.flex.samples.product.ProductDAO class -->
+        <s:RemoteObject id="ro" destination="productService" endpoint="http://localhost:8080/testdrive/messagebroker/amf"
+                        result="remote_resultHandler(event)"/>
+    </fx:Declarations>
+
+    <fx:Script><![CDATA[
+        import mx.collections.ArrayCollection;
+        import mx.rpc.events.ResultEvent;
+
+        private function getRemoteData(event:MouseEvent): void {
+            ro.findAll();
+        }
+
+        protected function remote_resultHandler(event:ResultEvent): void {
+            // productService return a list of Product
+            var cellList:ArrayCollection = event.result as ArrayCollection;
+            for (var x:int = 0; x < cellList.length; x++) {
+                log.text += (JSON.stringify(cellList.getItemAt(x)));
+                log.text += "\n";
+            }
+        }
+
+        ]]></fx:Script>
+
+    <s:Label  left="10" top="10" right="10" fontWeight="bold" fontSize="13" textAlign="center">Simple Remote Object</s:Label>
+    <s:Button id="getData" left="10" top="40"  click="getRemoteData(event)" label="Get Data"/>
+    <s:TextArea id="log" left="10" top = "80" bottom="10" right="10"/>
+
+</s:WindowedApplication>
