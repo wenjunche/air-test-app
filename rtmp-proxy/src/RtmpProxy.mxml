@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+                       creationComplete="app_creationCompleteHandler(event)" backgroundColor="white" showStatusBar="false"
+                       width="700" height="500"
+>
+    <fx:Script><![CDATA[
+        import fin.desktop.RuntimeConfiguration;
+        import fin.desktop.RuntimeLauncher;
+        import fin.desktop.System;
+        import fin.desktop.connection.DesktopConnection;
+
+        import mx.core.UIComponent;
+
+        import mx.events.FlexEvent;
+
+        import org.osmf.net.StreamType;
+
+        import spark.components.mediaClasses.DynamicStreamingVideoItem;
+        import spark.components.mediaClasses.DynamicStreamingVideoSource;
+
+        [Bindable]
+        private var nc:NetConnection;
+        [Bindable]
+        private var ns:NetStream;
+        private var remoteVideo:Video;
+
+        protected var runtimeLauncher:RuntimeLauncher;
+        private var openfinSystem:fin.desktop.System;
+        private var desktopConnection:DesktopConnection;
+        [Bindable]
+        private var connectedToOpenFin:Boolean = false;
+        private var _cam:DynamicStreamingVideoSource = new DynamicStreamingVideoSource();
+        private var _dynVideoSource:DynamicStreamingVideoSource;
+
+        protected function app_creationCompleteHandler(event:FlexEvent):void {
+            connectedToOpenFin = false;
+            NativeApplication.nativeApplication.addEventListener(Event.EXITING, onExit);
+
+            RuntimeConfiguration.enableFileLogging("testAirApp.log");
+            RuntimeConfiguration.enableTraceLogging();
+        }
+
+        protected function btn_connectHandler(event:MouseEvent):void {
+            /*
+            var cfg:RuntimeConfiguration = new RuntimeConfiguration("Flex Rtmp Proxy");
+            cfg.runtimeVersion = "8.56.24.30";
+            cfg.additionalRuntimeArguments = "--v=1 --no-sandbox";
+            cfg.onConnectionReady = onConnectionReady;
+            cfg.onConnectionError = onConnectionError;
+            cfg.onConnectionClose = onConnectionClose;
+            cfg.connectionTimeout = 15000;
+            runtimeLauncher = new RuntimeLauncher(cfg);
+            */
+
+            desktopConnection = new DesktopConnection("Flex Rtmp Proxy", "localhost", "9696", onConnectionReady, onConnectionError);
+        }
+
+        private function onConnectionReady():void {
+            connectedToOpenFin = true;
+            launchButton.enabled = false;
+            openfinSystem = new fin.desktop.System();
+            trace("Connection Successful!");
+        }
+
+        private function onConnectionError(reason:String = null):void {
+            trace("Connection failed", reason);
+        }
+
+        private function onConnectionClose(reason:String = null):void {
+            trace("Connection close", reason);
+        }
+
+        private function onExit(event:Event):void {
+            trace("Exiting");
+        }
+
+        protected function btn_disconnectHandler(event:MouseEvent):void {
+            fin.desktop.System.getInstance().exit(function () {
+                trace("exit success callback");
+            });
+        }
+
+        protected function connect(url:String):void {
+            NetConnection.defaultObjectEncoding = ObjectEncoding.AMF0; // MUST SUPPLY THIS!!!
+            openfinSystem.createProxySocket({url: url}, onProxySocketCreated);
+        }
+
+        protected function onProxySocketCreated(data:Object):void {
+            if (data.hasOwnProperty('proxyUrl')) {
+                var proxyUrl:String = data.proxyUrl;
+                localUrl.text = proxyUrl;
+                if (nc == null) {
+                    nc = new NetConnection();
+                    nc.addEventListener(NetStatusEvent.NET_STATUS, netStatusHandler, false, 0, true);
+                    nc.addEventListener(IOErrorEvent.IO_ERROR, errorHandler, false, 0, true);
+                    nc.addEventListener(SecurityErrorEvent.SECURITY_ERROR, errorHandler, false, 0, true);
+                    nc.addEventListener(AsyncErrorEvent.ASYNC_ERROR, errorHandler, false, 0, true);
+                    nc.client = {};
+                    trace('connect() ' + proxyUrl);
+                    nc.connect(proxyUrl);
+                }
+            }
+        }
+
+        private function netStatusHandler(event:NetStatusEvent):void {
+            trace('netStatusHandler() ' + event.type + ' ' + event.info.code);
+            switch (event.info.code) {
+                case 'NetConnection.Connect.Success':
+                    break;
+                case 'NetConnection.Connect.Failed':
+                case 'NetConnection.Connect.Reject':
+                case 'NetConnection.Connect.Closed':
+                    nc = null;
+                    closeStream();
+                    break;
+            }
+        }
+
+        private function errorHandler(event:ErrorEvent):void {
+            trace('errorHandler() ' + event.type + ' ' + event.text);
+            if (nc != null)
+                nc.close();
+            nc = null;
+            closeStream();
+        }
+
+        protected function publish(name:String, record:Boolean):void {
+            if (ns == null && nc != null && nc.connected) {
+                ns = new NetStream(nc);
+                ns.addEventListener(NetStatusEvent.NET_STATUS, netStatusHandler, false, 0, true);
+                ns.addEventListener(IOErrorEvent.IO_ERROR, streamErrorHandler, false, 0, true);
+                ns.addEventListener(AsyncErrorEvent.ASYNC_ERROR, streamErrorHandler, false, 0, true);
+                ns.client = {};
+
+                _dynVideoSource = new DynamicStreamingVideoSource();
+                var videoItems:Vector.<DynamicStreamingVideoItem>;
+                videoItems = new Vector.<DynamicStreamingVideoItem>();
+                videoItems[0] = new DynamicStreamingVideoItem();
+                _dynVideoSource.host = "";
+                _dynVideoSource.streamType = StreamType.LIVE;
+                _dynVideoSource.streamItems = videoItems;
+                local.source = _dynVideoSource;
+                var cam:Camera = Camera.getCamera(); //Camera.names[0]);
+                cam.setMode(640, 480, 15);
+                cam.setQuality(0, 80);
+                local.videoObject.attachCamera(cam);
+
+                ns.publish(name, record ? 'record' : null);
+                ns.attachCamera(Camera.getCamera());
+                ns.attachAudio(Microphone.getMicrophone(-1));
+            }
+        }
+
+        private function play(name:String):void {
+            if (ns == null && nc != null && nc.connected) {
+                ns = new NetStream(nc);
+                ns.addEventListener(NetStatusEvent.NET_STATUS, netStatusHandler, false, 0, true);
+                ns.addEventListener(IOErrorEvent.IO_ERROR, streamErrorHandler, false, 0, true);
+                ns.addEventListener(AsyncErrorEvent.ASYNC_ERROR, streamErrorHandler, false, 0, true);
+                ns.client = {};
+                ns.play(name);
+                remoteVideo.attachNetStream(ns);
+            } else {
+                trace('Not ready to play');
+            }
+        }
+
+        private function streamErrorHandler(event:ErrorEvent):void {
+            trace('streamErrorHandler() ' + event.type + ' ' + event.text);
+            closeStream();
+        }
+
+        private function closeStream():void {
+            if (ns != null) {
+                ns.close();
+                ns = null;
+            }
+            remoteVideo.clear();
+            if (local.videoObject != null) {
+                local.videoObject.attachCamera(null);
+            }
+        }
+
+        private function localCreated():void {
+            var ui:UIComponent = new UIComponent();
+            remoteVideo = new Video(160, 120);
+            ui.width = 160;
+            ui.height = 120;
+            remoteVideo.width = 160;
+            remoteVideo.height = 120;
+            ui.addChild(remoteVideo);
+            this.videoBox.addElement(ui);
+        }
+
+        private function closeNetConnection():void {
+            trace('close()');
+            if (nc != null) {
+                nc.close();
+                nc = null;
+                closeStream();
+            }
+        }
+        ]]></fx:Script>
+    <s:Label  left="10" top="10" right="10" fontWeight="bold" fontSize="13" textAlign="center">RTMP Proxy Socket Demo</s:Label>
+    <s:Button id="launchButton" left="10" top="40" enabled="{!connectedToOpenFin}" click="btn_connectHandler(event)" label="Connect to OpenFin"/>
+    <s:HGroup left="10" top="80" verticalAlign="middle">
+        <s:Label text="NetConnection"/>
+        <s:TextInput id="urlText" text="rtmp://localhost/myapp" width="200" enabled="{nc == null &amp;&amp; connectedToOpenFin}"/>
+        <s:Button label="Connect" click="connect(urlText.text)" enabled="{nc == null &amp;&amp; connectedToOpenFin}"/>
+        <s:Button label="Close" click="closeNetConnection()" enabled="{nc != null}"/>
+        <s:TextInput id="localUrl" text="" width="200" enabled="false"/>
+    </s:HGroup>
+    <s:HGroup left="10" top="120" verticalAlign="middle">
+        <s:Label text="NetStream"/>
+        <s:TextInput id="streamText" text="user1" toolTip="Stream name to publish or play" enabled="{nc != null}"/>
+        <s:CheckBox id="recordCheckBox" label="Enable recording" toolTip="Only valid if publishing"/>
+        <s:Button label="Publish" click="publish(streamText.text, recordCheckBox.selected)" enabled="{nc != null &amp;&amp; ns == null}"/>
+        <s:Button label="Play" click="play(streamText.text)" enabled="{nc != null &amp;&amp; ns == null}"/>
+        <s:Button label="Close" click="closeStream()" enabled="{nc != null &amp;&amp; ns != null}"/>
+    </s:HGroup>
+
+    <s:HGroup id="videoBox" left="10" top="160" verticalAlign="middle">
+        <s:VideoDisplay id="local" creationComplete="localCreated()" width="160" height="120" />
+    </s:HGroup>
+
+</s:WindowedApplication>

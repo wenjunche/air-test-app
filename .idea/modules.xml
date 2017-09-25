@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/air-app/air-app.iml" filepath="$PROJECT_DIR$/air-app/air-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/remote-obj/remote-obj.iml" filepath="$PROJECT_DIR$/remote-obj/remote-obj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rtmp-proxy/rtmp-proxy.iml" filepath="$PROJECT_DIR$/rtmp-proxy/rtmp-proxy.iml" />
       <module fileurl="file://$PROJECT_DIR$/simple-feed/simple-feed.iml" filepath="$PROJECT_DIR$/simple-feed/simple-feed.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-app.iml" filepath="$PROJECT_DIR$/test-app.iml" />
     </modules>
