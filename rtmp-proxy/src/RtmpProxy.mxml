@@ -41,18 +41,14 @@
         }
 
         protected function btn_connectHandler(event:MouseEvent):void {
-            /*
             var cfg:RuntimeConfiguration = new RuntimeConfiguration("Flex Rtmp Proxy");
-            cfg.runtimeVersion = "8.56.24.30";
+            cfg.runtimeVersion = "8.56.25.6";
             cfg.additionalRuntimeArguments = "--v=1 --no-sandbox";
             cfg.onConnectionReady = onConnectionReady;
             cfg.onConnectionError = onConnectionError;
             cfg.onConnectionClose = onConnectionClose;
             cfg.connectionTimeout = 15000;
             runtimeLauncher = new RuntimeLauncher(cfg);
-            */
-
-            desktopConnection = new DesktopConnection("Flex Rtmp Proxy", "localhost", "9696", onConnectionReady, onConnectionError);
         }
 
         private function onConnectionReady():void {
