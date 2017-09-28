@@ -201,7 +201,7 @@
     <s:Button id="launchButton" left="10" top="40" enabled="{!connectedToOpenFin}" click="btn_connectHandler(event)" label="Connect to OpenFin"/>
     <s:HGroup left="10" top="80" verticalAlign="middle">
         <s:Label text="NetConnection"/>
-        <s:TextInput id="urlText" text="rtmp://localhost/myapp" width="200" enabled="{nc == null &amp;&amp; connectedToOpenFin}"/>
+        <s:TextInput id="urlText" text="rtmps://rtmp.openf.in/myapp" width="200" enabled="{nc == null &amp;&amp; connectedToOpenFin}"/>
         <s:Button label="Connect" click="connect(urlText.text)" enabled="{nc == null &amp;&amp; connectedToOpenFin}"/>
         <s:Button label="Close" click="closeNetConnection()" enabled="{nc != null}"/>
         <s:TextInput id="localUrl" text="" width="200" enabled="false"/>
