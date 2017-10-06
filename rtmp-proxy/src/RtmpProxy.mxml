@@ -55,6 +55,8 @@
             connectedToOpenFin = true;
             launchButton.enabled = false;
             openfinSystem = new fin.desktop.System();
+            openfinSystem.addEventListener("proxy-socket-auth-requested", onProxySocketAuth);
+
             trace("Connection Successful!");
         }
 
@@ -81,6 +83,16 @@
             openfinSystem.createProxySocket({url: url}, onProxySocketCreated);
         }
 
+        protected function onProxySocketAuth(event: Object) {
+            username.enabled = true;
+            password.enabled = true;
+            login.enabled = true;
+            trace("Proxy auth requested", event.url);
+        }
+
+        protected function loginProxy(url:String, username: String, password: String) {
+            openfinSystem.authenticateProxySocket({url: url, username: username, password: password});
+        }
         protected function onProxySocketCreated(data:Object):void {
             if (data.hasOwnProperty('proxyUrl')) {
                 var proxyUrl:String = data.proxyUrl;
@@ -207,6 +219,12 @@
         <s:TextInput id="localUrl" text="" width="200" enabled="false"/>
     </s:HGroup>
     <s:HGroup left="10" top="120" verticalAlign="middle">
+        <s:Label text="Proxy Auth"/>
+        <s:TextInput id="username" text="" width="200" enabled="false"/>
+        <s:TextInput id="password" text="" width="200" enabled="false"/>
+        <s:Button id="login" label="Login" click="loginProxy(urlText.text, username.text, password.text)" enabled="false"/>
+    </s:HGroup>
+    <s:HGroup left="10" top="160" verticalAlign="middle">
         <s:Label text="NetStream"/>
         <s:TextInput id="streamText" text="user1" toolTip="Stream name to publish or play" enabled="{nc != null}"/>
         <s:CheckBox id="recordCheckBox" label="Enable recording" toolTip="Only valid if publishing"/>
