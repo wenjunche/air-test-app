@@ -3,8 +3,6 @@
         creationComplete="app_creationCompleteHandler(event)" backgroundColor="white" showStatusBar="false"
                        addedToStage="added_to_stage_handler(event)" top="300" left="300">
     <fx:Script><![CDATA[
-        import com.openfin.OpenfinNativeExtention;
-
         import fin.desktop.ApplicationOptions;
 
         import fin.desktop.CaptureOptions;
@@ -14,7 +12,6 @@
         import fin.desktop.InterApplicationBus;
         import fin.desktop.System;
         import fin.desktop.RuntimeLauncher;
-        import fin.desktop.Window;
         import fin.desktop.WindowOptions;
 
         import mx.events.FlexEvent;
@@ -68,7 +65,8 @@
             winOpts.contextMenu = true;
             winOpts.saveWindowState = false;
             appOpts.mainWindowOptions = winOpts;
-            cw.capture(appOpts, captureOptions, captureCallback);
+            captureOptions.applicationOptions = appOpts;
+            cw.capture(captureOptions, captureCallback);
         }
 
         private function captureCallback(event:*): void {

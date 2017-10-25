@@ -5,10 +5,10 @@
       <configuration name="rtmp-proxy" target-platform="Desktop" main-class="RtmpProxy" output-file="RtmpProxy.swf" output-folder="$MODULE_DIR$/../out/production/rtmp-proxy">
         <dependencies target-player="11.1">
           <entries>
-            <entry library-id="00c11243-54ca-4081-a70c-b9753853cf26">
+            <entry library-id="e1e71c07-e5a3-4044-9edc-46349aea9f9f">
               <dependency linkage="Merged" />
             </entry>
-            <entry library-id="8b2463ab-e67e-4cb1-befd-7ac03f9edd78">
+            <entry library-id="84c5ed8d-26e5-419d-a6f4-308524ec6f0d">
               <dependency linkage="Merged" />
             </entry>
           </entries>
@@ -31,24 +31,22 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library" exported="">
       <library type="flex">
-        <properties id="00c11243-54ca-4081-a70c-b9753853cf26" />
+        <properties id="e1e71c07-e5a3-4044-9edc-46349aea9f9f" />
         <CLASSES>
-          <root url="file://$MODULE_DIR$/../../air-adapter/out/production/air-adapter" />
+          <root url="jar://$MODULE_DIR$/../../air-adapter/lib/OpenFinAirNativeExtension-6.0.2.ane!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/../../air-adapter/out/production/air-adapter" recursive="false" />
       </library>
     </orderEntry>
     <orderEntry type="module-library" exported="">
       <library type="flex">
-        <properties id="8b2463ab-e67e-4cb1-befd-7ac03f9edd78" />
+        <properties id="84c5ed8d-26e5-419d-a6f4-308524ec6f0d" />
         <CLASSES>
-          <root url="file://$MODULE_DIR$/../../AirNativeExtensionLib/lib" />
+          <root url="jar://$MODULE_DIR$/../../air-adapter/out/production/air-adapter/OpenFinAirAdapter-6.0.2.swc!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/../../AirNativeExtensionLib/lib" recursive="false" />
       </library>
     </orderEntry>
   </component>

@@ -22,7 +22,7 @@
   <!--<publisherID></publisherID>-->
   <!-- Identifies the ActionScript extensions used by an application. -->
   <extensions>
-    <extensionID>com.openfin.OpenfinNativeExtention</extensionID>
+    <extensionID>com.openfin.OpenFinNativeExtension</extensionID>
   </extensions>
   <!-- Settings for the application's initial window. Required. -->
   <initialWindow>

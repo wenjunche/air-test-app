@@ -7,20 +7,16 @@
            creationComplete="app_creationCompleteHandler2(event)" systemChrome="none" backgroundColor="white" showStatusBar="false"
             addedToStage="added_to_stage_handler(event)" >
     <fx:Script><![CDATA[
-        import com.openfin.OpenfinNativeExtention;
-
         import fin.desktop.ApplicationOptions;
         import fin.desktop.CaptureOptions;
         import fin.desktop.CapturingWindow;
 
-        import fin.desktop.RuntimeLauncher;
-        import fin.desktop.InterApplicationBus;
         import fin.desktop.WindowOptions;
 
         import mx.events.FlexEvent;
 
         private var captured:Boolean = false;
-        private var cw:CapturingWindow
+        private var cw:CapturingWindow;
 
         protected function app_creationCompleteHandler2(event:FlexEvent):void {
         }
@@ -50,7 +46,8 @@
             winOpts.contextMenu = true;
             winOpts.saveWindowState = false;
             appOpts.mainWindowOptions = winOpts;
-            cw.capture(appOpts, captureOptions);
+            captureOptions.applicationOptions = appOpts;
+            cw.capture(captureOptions);
         }
         ]]></fx:Script>
     <s:Label  left="10" top="10" right="10" fontWeight="bold" fontSize="13" textAlign="center">My fancy Air app window 2</s:Label>
