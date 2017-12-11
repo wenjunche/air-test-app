@@ -8,7 +8,7 @@
             <entry library-id="e1e71c07-e5a3-4044-9edc-46349aea9f9f">
               <dependency linkage="Merged" />
             </entry>
-            <entry library-id="84c5ed8d-26e5-419d-a6f4-308524ec6f0d">
+            <entry library-id="575789c6-76ee-4af6-a7c2-3397114a0139">
               <dependency linkage="Merged" />
             </entry>
           </entries>
@@ -33,7 +33,7 @@
       <library type="flex">
         <properties id="e1e71c07-e5a3-4044-9edc-46349aea9f9f" />
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../air-adapter/lib/OpenFinAirNativeExtension-6.0.2.ane!/" />
+          <root url="jar://$MODULE_DIR$/../../air-adapter/lib/OpenFinAirNativeExtension-6.0.3.ane!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -41,9 +41,9 @@
     </orderEntry>
     <orderEntry type="module-library" exported="">
       <library type="flex">
-        <properties id="84c5ed8d-26e5-419d-a6f4-308524ec6f0d" />
+        <properties id="575789c6-76ee-4af6-a7c2-3397114a0139" />
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../air-adapter/out/production/air-adapter/OpenFinAirAdapter-6.0.2.swc!/" />
+          <root url="jar://$MODULE_DIR$/../../air-adapter/out/production/air-adapter/OpenFinAirAdapter-6.0.4.swc!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

@@ -42,13 +42,30 @@
 
         protected function btn_connectHandler(event:MouseEvent):void {
             var cfg:RuntimeConfiguration = new RuntimeConfiguration("Flex Rtmp Proxy");
-            cfg.runtimeVersion = "8.56.25.6";
+            cfg.runtimeVersion = "8.56.27.43";
             cfg.additionalRuntimeArguments = "--v=1 --no-sandbox";
             cfg.onConnectionReady = onConnectionReady;
             cfg.onConnectionError = onConnectionError;
             cfg.onConnectionClose = onConnectionClose;
             cfg.connectionTimeout = 15000;
             runtimeLauncher = new RuntimeLauncher(cfg);
+
+/*
+            var request:URLRequest = new URLRequest("http://localhost:8081/icon.png");
+            request.method = URLRequestMethod.GET;
+            var loader:URLLoader = new URLLoader();
+            loader.addEventListener(Event.COMPLETE, onGetComplete);
+            loader.addEventListener(HTTPStatusEvent.HTTP_STATUS, httpStatusHandler);
+            loader.addEventListener(ProgressEvent.PROGRESS, progressHandler);
+            loader.addEventListener(IOErrorEvent.IO_ERROR, ioErrorHandler);
+            loader.addEventListener(SecurityErrorEvent.SECURITY_ERROR, securityErrorHandler);
+            loader.dataFormat = URLLoaderDataFormat.BINARY;
+            try {
+                loader.load(request);
+            } catch (error:Error) {
+                trace("loader.load error", error);
+            }
+*/
         }
 
         private function onConnectionReady():void {
@@ -83,16 +100,17 @@
             openfinSystem.createProxySocket({url: url}, onProxySocketCreated);
         }
 
-        protected function onProxySocketAuth(event: Object) {
+        protected function onProxySocketAuth(event:Object) {
             username.enabled = true;
             password.enabled = true;
             login.enabled = true;
             trace("Proxy auth requested", event.url);
         }
 
-        protected function loginProxy(url:String, username: String, password: String) {
+        protected function loginProxy(url:String, username:String, password:String) {
             openfinSystem.authenticateProxySocket({url: url, username: username, password: password});
         }
+
         protected function onProxySocketCreated(data:Object):void {
             if (data.hasOwnProperty('proxyUrl')) {
                 var proxyUrl:String = data.proxyUrl;
@@ -208,6 +226,70 @@
                 closeStream();
             }
         }
+
+        protected function retrieve(url:String):void {
+            openfinSystem.createProxySocket({url: url}, onProxySocketCreated2);
+        }
+
+        protected function onProxySocketCreated3(data:Object):void {
+            if (data.hasOwnProperty('proxyUrl')) {
+                var proxyUrl:String = data.proxyUrl;
+                resourceLocalUrl.text = proxyUrl;
+                var request:URLRequest = new URLRequest(proxyUrl);
+                request.method = URLRequestMethod.GET;
+                var loader:URLLoader = new URLLoader();
+                loader.addEventListener(Event.COMPLETE, onGetComplete);
+                loader.addEventListener(HTTPStatusEvent.HTTP_STATUS, httpStatusHandler);
+                loader.addEventListener(ProgressEvent.PROGRESS, progressHandler);
+                loader.addEventListener(IOErrorEvent.IO_ERROR, ioErrorHandler);
+                loader.addEventListener(SecurityErrorEvent.SECURITY_ERROR, securityErrorHandler);
+                loader.dataFormat = URLLoaderDataFormat.BINARY;
+                loader.load(request);
+            }
+        }
+
+        protected function onProxySocketCreated2(data:Object):void {
+            if (data.hasOwnProperty('proxyUrl')) {
+                var proxyUrl:String = data.proxyUrl;
+                resourceLocalUrl.text = proxyUrl;
+                var socket:Socket = new Socket();
+                socket.addEventListener(Event.CONNECT, connectHandler);
+                socket.addEventListener(ProgressEvent.SOCKET_DATA, socketDataHandler);
+                socket.connect("localhost", data.localPort);
+            }
+        }
+
+        public function connectHandler(event:Event):void {
+            trace("Connected");
+        }
+
+        public function socketDataHandler(event:ProgressEvent):void {
+            trace("socketDataHandler");
+            var socket:Socket = event.target as Socket;
+            //Read the message from the socket
+            var message:String = socket.readUTFBytes(socket.bytesAvailable);
+            trace("Received: " + message);
+        }
+
+        function onGetComplete(event:Event):void {
+            trace("onGetComplete", event.target.data);
+        }
+
+        function httpStatusHandler(e:Event):void {
+            trace("httpStatusHandler:" + e);
+        }
+
+        function progressHandler(event:ProgressEvent):void {
+            trace("progressHandler loaded:" + event.bytesLoaded + " total: " + event.bytesTotal);
+        }
+
+        function ioErrorHandler(e:Event):void {
+            trace("ioErrorHandler: " + e);
+        }
+
+        function securityErrorHandler(e:Event):void {
+            trace("securityErrorHandler:" + e);
+        }
         ]]></fx:Script>
     <s:Label  left="10" top="10" right="10" fontWeight="bold" fontSize="13" textAlign="center">RTMP Proxy Socket Demo</s:Label>
     <s:Button id="launchButton" left="10" top="40" enabled="{!connectedToOpenFin}" click="btn_connectHandler(event)" label="Connect to OpenFin"/>
@@ -236,5 +318,13 @@
     <s:HGroup id="videoBox" left="10" top="160" verticalAlign="middle">
         <s:VideoDisplay id="local" creationComplete="localCreated()" width="160" height="120" />
     </s:HGroup>
+
+    <s:HGroup left="10" top="330" verticalAlign="middle">
+        <s:Label text="NetResource"/>
+        <s:TextInput id="resourceUrl" text="https://cdn.openfin.co/hello/img/openfin.ico" width="200" enabled="{connectedToOpenFin}"/>
+        <s:Button label="Connect" click="retrieve(resourceUrl.text)" enabled="{connectedToOpenFin}"/>
+        <s:TextInput id="resourceLocalUrl" text="" width="200" enabled="false"/>
+    </s:HGroup>
+
 
 </s:WindowedApplication>

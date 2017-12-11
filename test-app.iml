@@ -5,10 +5,10 @@
       <configuration name="flex-test-app" target-platform="Desktop" main-class="Main" output-file="Main.swf" output-folder="$MODULE_DIR$/out/production/air-test-app">
         <dependencies target-player="11.1">
           <entries>
-            <entry library-id="f268a1f5-5ab5-4cd0-b2ce-e4d8163f4591">
+            <entry library-id="7554a6f6-5ea4-422b-9091-1c35a84fe574">
               <dependency linkage="Merged" />
             </entry>
-            <entry library-id="86401440-c3d1-4d45-8693-7b9135d9db33">
+            <entry library-id="5d7ed9be-5085-4194-8745-47605a6eed83">
               <dependency linkage="Merged" />
             </entry>
           </entries>
@@ -33,9 +33,9 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library" exported="">
       <library type="flex">
-        <properties id="f268a1f5-5ab5-4cd0-b2ce-e4d8163f4591" />
+        <properties id="7554a6f6-5ea4-422b-9091-1c35a84fe574" />
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../air-adapter/lib/OpenFinAirNativeExtension-6.0.2.ane!/" />
+          <root url="jar://$MODULE_DIR$/../AirNativeExtensionLib/lib/OpenFinAirNativeExtension-6.0.3.ane!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -43,9 +43,9 @@
     </orderEntry>
     <orderEntry type="module-library" exported="">
       <library type="flex">
-        <properties id="86401440-c3d1-4d45-8693-7b9135d9db33" />
+        <properties id="5d7ed9be-5085-4194-8745-47605a6eed83" />
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../air-adapter/out/production/air-adapter/OpenFinAirAdapter-6.0.2.swc!/" />
+          <root url="jar://$MODULE_DIR$/../air-adapter/out/production/air-adapter/OpenFinAirAdapter-6.0.4.swc!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

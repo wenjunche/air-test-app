@@ -7,12 +7,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f7924c20-b807-465d-82ab-080b951c09e0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main-app.xml" afterPath="$PROJECT_DIR$/Main-app.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/air-app/air-app.iml" afterPath="$PROJECT_DIR$/air-app/air-app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/air-app/Main-descriptor.xml" afterPath="$PROJECT_DIR$/out/production/air-app/Main-descriptor.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rtmp-proxy/rtmp-proxy.iml" afterPath="$PROJECT_DIR$/rtmp-proxy/rtmp-proxy.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ChildWindow.mxml" afterPath="$PROJECT_DIR$/src/ChildWindow.mxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.mxml" afterPath="$PROJECT_DIR$/src/Main.mxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rtmp-proxy/src/RtmpProxy.mxml" afterPath="$PROJECT_DIR$/rtmp-proxy/src/RtmpProxy.mxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-app.iml" afterPath="$PROJECT_DIR$/test-app.iml" />
     </list>
     <ignored path="air-test-app.iws" />
@@ -40,63 +38,93 @@
       <file leaf-file-name="Main.mxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.mxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="19" column="24" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
               <folding>
-                <marker date="1508952742254" expanded="true" signature="353:391" ph="..." />
-                <marker date="1508952742254" expanded="true" signature="980:1246" ph="{...}" />
-                <marker date="1508952742254" expanded="true" signature="1312:1385" ph="{...}" />
-                <marker date="1508952742254" expanded="true" signature="1456:1984" ph="{...}" />
-                <marker date="1508952742254" expanded="true" signature="2058:2197" ph="{...}" />
-                <marker date="1508952742254" expanded="true" signature="2122:2185" ph="{...}" />
-                <marker date="1508952742254" expanded="true" signature="2268:3276" ph="{...}" />
-                <marker date="1508952742254" expanded="true" signature="3334:3497" ph="{...}" />
-                <marker date="1508952742254" expanded="true" signature="3457:3497" ph="{...}" />
-                <marker date="1508952742254" expanded="true" signature="3549:4024" ph="{...}" />
-                <marker date="1508952742254" expanded="true" signature="3940:4012" ph="{...}" />
-                <marker date="1508952742254" expanded="true" signature="4015:4024" ph="{...}" />
-                <marker date="1508952742254" expanded="true" signature="4096:4155" ph="{...}" />
-                <marker date="1508952742254" expanded="true" signature="4227:4285" ph="{...}" />
-                <marker date="1508952742254" expanded="true" signature="4337:4378" ph="{...}" />
+                <marker date="1511832297682" expanded="true" signature="353:391" ph="..." />
+                <marker date="1511832297682" expanded="true" signature="980:1246" ph="{...}" />
+                <marker date="1511832297682" expanded="true" signature="1312:1385" ph="{...}" />
+                <marker date="1511832297682" expanded="true" signature="1456:1544" ph="{...}" />
+                <marker date="1511832297682" expanded="true" signature="1456:1984" ph="{...}" />
+                <marker date="1511832297682" expanded="true" signature="2058:2197" ph="{...}" />
+                <marker date="1511832297682" expanded="true" signature="2122:2185" ph="{...}" />
+                <marker date="1511832297682" expanded="true" signature="2268:3276" ph="{...}" />
+                <marker date="1511832297682" expanded="true" signature="3334:3497" ph="{...}" />
+                <marker date="1511832297682" expanded="true" signature="3549:4024" ph="{...}" />
+                <marker date="1511832297682" expanded="true" signature="3940:4012" ph="{...}" />
+                <marker date="1511832297682" expanded="true" signature="4012:4024" ph="{...}" />
+                <marker date="1511832297682" expanded="true" signature="4096:4155" ph="{...}" />
+                <marker date="1511832297682" expanded="true" signature="4227:4285" ph="{...}" />
+                <marker date="1511832297682" expanded="true" signature="4337:4378" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main-app.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Main-app.xml">
+      <file leaf-file-name="RtmpProxy.mxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rtmp-proxy/src/RtmpProxy.mxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="44" column="52" lean-forward="false" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.as" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/air-app/src/Main.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChildWindow.mxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ChildWindow.mxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+            <state relative-caret-position="248">
+              <caret line="100" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
               <folding>
-                <marker date="1508952732133" expanded="true" signature="376:590" ph="..." />
-                <marker date="1508952732133" expanded="true" signature="392:590" ph="..." />
-                <marker date="1508952732133" expanded="true" signature="757:768" ph="{...}" />
-                <marker date="1508952732133" expanded="true" signature="833:1181" ph="{...}" />
-                <marker date="1508952732133" expanded="true" signature="923:1171" ph="{...}" />
-                <marker date="1508952732133" expanded="true" signature="1038:1155" ph="{...}" />
-                <marker date="1508952732133" expanded="true" signature="1224:2152" ph="{...}" />
+                <marker date="1512746766724" expanded="false" signature="343:774" ph="..." />
+                <marker date="1512746766724" expanded="true" signature="1400:1666" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="1737:3029" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="2206:3019" ph="/*...*/" />
+                <marker date="1512746766724" expanded="true" signature="2876:2929" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="2950:3016" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="3081:3367" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="3439:3498" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="3570:3628" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="3680:3721" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="3795:3934" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="3859:3922" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="3988:4172" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="4233:4406" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="4492:4606" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="4674:5475" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="4725:5465" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="4854:5451" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="5546:6022" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="5664:6012" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="5719:5746" ph="..." />
+                <marker date="1512746766724" expanded="true" signature="5905:5998" ph="..." />
+                <marker date="1512746766724" expanded="true" signature="6085:6272" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="6343:7664" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="6403:7654" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="7714:8312" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="7774:8237" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="8243:8302" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="8381:8495" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="8541:8797" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="8571:8641" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="8718:8787" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="8844:9166" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="9219:9390" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="9279:9380" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="9445:9536" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="9605:10485" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="9656:10475" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="10554:11003" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="10605:10993" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="11062:11105" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="11175:11449" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="11500:11566" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="11617:11673" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="11734:11843" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="11891:11945" ph="{...}" />
+                <marker date="1512746766724" expanded="true" signature="11999:12058" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="library.swf" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/Downloads/flex_sdk_4.6/frameworks/libs/air/airglobal.swc!/library.swf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19448">
+              <caret line="1144" column="29" lean-forward="false" selection-start-line="1144" selection-start-column="29" selection-end-line="1144" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -113,17 +141,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>{server.port}</find>
-      <find>{context.root}</find>
-      <find>main</find>
-      <find>log.te</find>
-      <find>add</find>
-      <find>Bindable</find>
-      <find>DesktopConnection</find>
-      <find>Created discovery pipe successfully</find>
-      <find>runtimeLauncher</find>
-      <find>launchButton</find>
-      <find>enable</find>
       <find>netStatusHandler</find>
       <find>connectedToOpenFin</find>
       <find>camera</find>
@@ -143,6 +160,17 @@
       <find>cap</find>
       <find>child01</find>
       <find>OpenfinNativeExtention</find>
+      <find>native</find>
+      <find>url</find>
+      <find>u</find>
+      <find>.subs</find>
+      <find>connectevent</find>
+      <find>connectev</find>
+      <find>clientso</find>
+      <find>ConnectEvent</find>
+      <find>socket</find>
+      <find>onGetComplete</find>
+      <find>rtmp://</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\wenjun\Documents\Project\air-test-app\src</dir>
@@ -176,13 +204,18 @@
         <option value="$PROJECT_DIR$/src/preload.js" />
         <option value="$PROJECT_DIR$/air-app/src/Main.as" />
         <option value="$PROJECT_DIR$/rtmp-proxy/README.md" />
-        <option value="$PROJECT_DIR$/rtmp-proxy/src/RtmpProxy.mxml" />
         <option value="$PROJECT_DIR$/../air-adapter/out/production/air-adapter/OpenFinAirAdapter-6.0.1.swc!/library.swf" />
         <option value="$PROJECT_DIR$/src/ChildWindow.mxml" />
-        <option value="$PROJECT_DIR$/src/Main.mxml" />
         <option value="$PROJECT_DIR$/Main-app.xml" />
+        <option value="$PROJECT_DIR$/src/Main.mxml" />
+        <option value="$PROJECT_DIR$/rtmp-proxy/src/RtmpProxy.mxml" />
       </list>
     </option>
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <exe-path />
+    <config-path />
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -197,10 +230,17 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1533" />
-    <option name="width" value="1446" />
-    <option name="height" value="1047" />
+    <option name="x" value="-1677" />
+    <option name="y" value="62" />
+    <option name="width" value="1584" />
+    <option name="height" value="945" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -218,8 +258,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -230,12 +268,12 @@
             <path>
               <item name="air-test-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="air-test-app" type="462c0819:PsiDirectoryNode" />
-              <item name="air-app" type="462c0819:PsiDirectoryNode" />
+              <item name="rtmp-proxy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="air-test-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="air-test-app" type="462c0819:PsiDirectoryNode" />
-              <item name="air-app" type="462c0819:PsiDirectoryNode" />
+              <item name="rtmp-proxy" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -247,19 +285,34 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../air-adapter/out/production/air-adapter/OpenFinAirAdapter-6.0.2.swc!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../air-adapter/lib/OpenFinAirNativeExtension-6.0.3.ane!/" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.tslint" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.tslint" value="" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -286,7 +339,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Flash App.air-test-app">
+  <component name="RunManager" selected="Flash App.rtmp-proxy">
     <configuration name="App" type="FlashRunConfigurationType" factoryName="Flash App">
       <option name="BCName" value="flex-test-app" />
       <option name="IOSSimulatorSdkPath" value="" />
@@ -1155,33 +1208,49 @@
       <workItem from="1508421981278" duration="3307000" />
       <workItem from="1508764123847" duration="597000" />
       <workItem from="1508765711050" duration="599000" />
-      <workItem from="1508858026941" duration="10791000" />
+      <workItem from="1508858026941" duration="11506000" />
+      <workItem from="1509128826571" duration="1269000" />
+      <workItem from="1509390889056" duration="4028000" />
+      <workItem from="1509404492704" duration="608000" />
+      <workItem from="1509628186967" duration="618000" />
+      <workItem from="1509729031776" duration="1510000" />
+      <workItem from="1509817436314" duration="598000" />
+      <workItem from="1510062650246" duration="729000" />
+      <workItem from="1510066377749" duration="622000" />
+      <workItem from="1510073375909" duration="456000" />
+      <workItem from="1510245107539" duration="2654000" />
+      <workItem from="1510848995187" duration="2129000" />
+      <workItem from="1511188888803" duration="5000" />
+      <workItem from="1511376745752" duration="46000" />
+      <workItem from="1511628844414" duration="691000" />
+      <workItem from="1511832230465" duration="22788000" />
+      <workItem from="1512676867112" duration="1299000" />
+      <workItem from="1512746681307" duration="8833000" />
+      <workItem from="1513028979158" duration="129000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="457439000" />
+    <option name="totallyTimeSpent" value="507166000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1533" y="0" width="1446" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="-1677" y="62" width="1584" height="945" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39527026" sideWeight="0.478355" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25318065" sideWeight="0.34055117" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38175675" sideWeight="0.2958153" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38175675" sideWeight="0.7041847" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37913486" sideWeight="0.14698163" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32955465" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37913486" sideWeight="0.85301834" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.7020202" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4065934" sideWeight="0.6898785" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16883117" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16141732" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905295" sideWeight="0.497114" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1196,6 +1265,7 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905295" sideWeight="0.497114" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1235,28 +1305,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main.mxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.mxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="60" lean-forward="false" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ChildWindow.mxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../AirNativeExtensionLib/lib/OpenFinAirNativeExtension.ane!/library.swf" />
     <entry file="file://$USER_HOME$/Downloads/flex_sdk_4.6/frameworks/projects/framework/src/mx/core/UIComponent.as">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -1476,13 +1524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Downloads/flex_sdk_4.6/frameworks/libs/air/airglobal.swc!/library.swf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="7860" column="13" lean-forward="false" selection-start-line="7860" selection-start-column="13" selection-end-line="7860" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rtmp-proxy/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1510,13 +1551,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtmp-proxy/src/RtmpProxy.mxml">
+    <entry file="jar://$PROJECT_DIR$/../air-adapter/out/production/air-adapter/OpenFinAirAdapter-6.0.1.swc!/library.swf" />
+    <entry file="jar://$PROJECT_DIR$/../AirNativeExtensionLib/lib/OpenFinAirNativeExtension-6.0.1.ane!/library.swf" />
+    <entry file="file://$PROJECT_DIR$/src/ChildWindow.mxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="82" column="78" lean-forward="false" selection-start-line="82" selection-start-column="78" selection-end-line="82" selection-end-column="78" />
+        <state relative-caret-position="306">
+          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Main-app.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="55" lean-forward="false" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../air-adapter/lib/OpenFinAirNativeExtension-6.0.2.ane!/library.swf" />
+    <entry file="jar://$PROJECT_DIR$/../air-adapter/out/production/air-adapter/OpenFinAirAdapter-6.0.3.swc!/library.swf" />
+    <entry file="jar://$PROJECT_DIR$/../air-adapter/target/openfin-air-adapter-6.0.4-SNAPSHOT.swc!/library.swf" />
+    <entry file="file://$PROJECT_DIR$/air-app/src/Main.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../air-adapter/out/production/air-adapter/OpenFinAirAdapter-6.0.4.swc!/library.swf" />
     <entry file="file://$PROJECT_DIR$/src/App.mxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1524,75 +1585,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../air-adapter/out/production/air-adapter/OpenFinAirAdapter-6.0.1.swc!/library.swf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="776" column="32" lean-forward="false" selection-start-line="776" selection-start-column="32" selection-end-line="776" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../AirNativeExtensionLib/lib/OpenFinAirNativeExtension-6.0.1.ane!/library.swf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/air-app/src/Main.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ChildWindow.mxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-          <folding>
-            <marker date="1508952732133" expanded="true" signature="376:590" ph="..." />
-            <marker date="1508952732133" expanded="true" signature="392:590" ph="..." />
-            <marker date="1508952732133" expanded="true" signature="757:768" ph="{...}" />
-            <marker date="1508952732133" expanded="true" signature="833:1181" ph="{...}" />
-            <marker date="1508952732133" expanded="true" signature="923:1171" ph="{...}" />
-            <marker date="1508952732133" expanded="true" signature="1038:1155" ph="{...}" />
-            <marker date="1508952732133" expanded="true" signature="1224:2152" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.mxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="323">
+          <caret line="19" column="24" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
           <folding>
-            <marker date="1508952742254" expanded="true" signature="353:391" ph="..." />
-            <marker date="1508952742254" expanded="true" signature="980:1246" ph="{...}" />
-            <marker date="1508952742254" expanded="true" signature="1312:1385" ph="{...}" />
-            <marker date="1508952742254" expanded="true" signature="1456:1984" ph="{...}" />
-            <marker date="1508952742254" expanded="true" signature="2058:2197" ph="{...}" />
-            <marker date="1508952742254" expanded="true" signature="2122:2185" ph="{...}" />
-            <marker date="1508952742254" expanded="true" signature="2268:3276" ph="{...}" />
-            <marker date="1508952742254" expanded="true" signature="3334:3497" ph="{...}" />
-            <marker date="1508952742254" expanded="true" signature="3457:3497" ph="{...}" />
-            <marker date="1508952742254" expanded="true" signature="3549:4024" ph="{...}" />
-            <marker date="1508952742254" expanded="true" signature="3940:4012" ph="{...}" />
-            <marker date="1508952742254" expanded="true" signature="4015:4024" ph="{...}" />
-            <marker date="1508952742254" expanded="true" signature="4096:4155" ph="{...}" />
-            <marker date="1508952742254" expanded="true" signature="4227:4285" ph="{...}" />
-            <marker date="1508952742254" expanded="true" signature="4337:4378" ph="{...}" />
+            <marker date="1511832297682" expanded="true" signature="353:391" ph="..." />
+            <marker date="1511832297682" expanded="true" signature="980:1246" ph="{...}" />
+            <marker date="1511832297682" expanded="true" signature="1312:1385" ph="{...}" />
+            <marker date="1511832297682" expanded="true" signature="1456:1544" ph="{...}" />
+            <marker date="1511832297682" expanded="true" signature="1456:1984" ph="{...}" />
+            <marker date="1511832297682" expanded="true" signature="2058:2197" ph="{...}" />
+            <marker date="1511832297682" expanded="true" signature="2122:2185" ph="{...}" />
+            <marker date="1511832297682" expanded="true" signature="2268:3276" ph="{...}" />
+            <marker date="1511832297682" expanded="true" signature="3334:3497" ph="{...}" />
+            <marker date="1511832297682" expanded="true" signature="3549:4024" ph="{...}" />
+            <marker date="1511832297682" expanded="true" signature="3940:4012" ph="{...}" />
+            <marker date="1511832297682" expanded="true" signature="4012:4024" ph="{...}" />
+            <marker date="1511832297682" expanded="true" signature="4096:4155" ph="{...}" />
+            <marker date="1511832297682" expanded="true" signature="4227:4285" ph="{...}" />
+            <marker date="1511832297682" expanded="true" signature="4337:4378" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main-app.xml">
+    <entry file="jar://$USER_HOME$/Downloads/flex_sdk_4.6/frameworks/libs/air/airglobal.swc!/library.swf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="44" column="52" lean-forward="false" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="52" />
+        <state relative-caret-position="19448">
+          <caret line="1144" column="29" lean-forward="false" selection-start-line="1144" selection-start-column="29" selection-end-line="1144" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtmp-proxy/src/RtmpProxy.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="100" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding>
+            <marker date="1512746766724" expanded="false" signature="343:774" ph="..." />
+            <marker date="1512746766724" expanded="true" signature="1400:1666" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="1737:3029" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="2206:3019" ph="/*...*/" />
+            <marker date="1512746766724" expanded="true" signature="2876:2929" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="2950:3016" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="3081:3367" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="3439:3498" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="3570:3628" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="3680:3721" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="3795:3934" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="3859:3922" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="3988:4172" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="4233:4406" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="4492:4606" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="4674:5475" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="4725:5465" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="4854:5451" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="5546:6022" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="5664:6012" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="5719:5746" ph="..." />
+            <marker date="1512746766724" expanded="true" signature="5905:5998" ph="..." />
+            <marker date="1512746766724" expanded="true" signature="6085:6272" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="6343:7664" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="6403:7654" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="7714:8312" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="7774:8237" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="8243:8302" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="8381:8495" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="8541:8797" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="8571:8641" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="8718:8787" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="8844:9166" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="9219:9390" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="9279:9380" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="9445:9536" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="9605:10485" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="9656:10475" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="10554:11003" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="10605:10993" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="11062:11105" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="11175:11449" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="11500:11566" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="11617:11673" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="11734:11843" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="11891:11945" ph="{...}" />
+            <marker date="1512746766724" expanded="true" signature="11999:12058" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1649,7 +1726,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>air-app|air-app</last-edited>
+          <last-edited>rtmp-proxy|rtmp-proxy</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

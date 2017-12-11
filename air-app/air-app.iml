@@ -8,7 +8,7 @@
             <entry library-id="9c14e3c8-21e6-4ec6-8ee2-1f064ac10021">
               <dependency linkage="Merged" />
             </entry>
-            <entry library-id="8c521b3e-5b81-4673-aa9f-c37fee1774ed">
+            <entry library-id="f68191cc-8612-4d2b-9e8c-0fe08b99b2a5">
               <dependency linkage="Merged" />
             </entry>
           </entries>
@@ -41,9 +41,9 @@
     </orderEntry>
     <orderEntry type="module-library" exported="">
       <library type="flex">
-        <properties id="8c521b3e-5b81-4673-aa9f-c37fee1774ed" />
+        <properties id="f68191cc-8612-4d2b-9e8c-0fe08b99b2a5" />
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../air-adapter/out/production/air-adapter/OpenFinAirAdapter-6.0.2.swc!/" />
+          <root url="jar://$MODULE_DIR$/../../air-adapter/out/production/air-adapter/OpenFinAirAdapter-6.0.4.swc!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
